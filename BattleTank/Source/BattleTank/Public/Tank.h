@@ -15,10 +15,17 @@ class BATTLETANK_API ATank : public APawn
 	GENERATED_BODY()
 
 public:
+	UPROPERTY(EditDefaultsOnly, Category=Firing)
+	float LaunchSpeed = 100000;
+
+public:
 	// Sets default values for this pawn's properties
 	ATank();
 
 	void AimAt(FVector HitLocation);
+
+	UFUNCTION(BlueprintCallable, Category=Setup)
+	void SetBarrelReference(UStaticMeshComponent* BarrelToSet);
 
 protected:
 	UTankAimingComponent* TankAimingComponent;
