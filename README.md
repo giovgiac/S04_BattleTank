@@ -1,2 +1,2 @@
-# S04_BattleTank
-An open-world head-to-head tank fight with simple AI, terrain and advanced control system.
+# Battle Tank
+A project from The Unreal Engine Developer Course, on Udemy.
