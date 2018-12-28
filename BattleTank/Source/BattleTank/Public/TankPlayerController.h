@@ -2,9 +2,6 @@
 
 #pragma once
 
-// Project Includes
-#include "Tank.h"
-
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
@@ -35,7 +32,7 @@ public:
 private:
 	void AimTowardsCrosshair();
 
-	ATank* GetControlledTank() const;
+	class ATank* GetControlledTank() const;
 
 	bool GetLookDirection(FVector2D ScreenLocation, FVector& OutLookDirection) const;
 

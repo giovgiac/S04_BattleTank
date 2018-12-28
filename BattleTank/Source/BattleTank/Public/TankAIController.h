@@ -2,9 +2,6 @@
 
 #pragma once
 
-// Project Includes
-#include "Tank.h"
-
 #include "CoreMinimal.h"
 #include "AIController.h"
 #include "TankAIController.generated.h"
@@ -23,7 +20,7 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 private:
-	ATank* GetControlledTank() const;
+	class ATank* GetControlledTank() const;
 
-	ATank* GetPlayerTank() const;
+	class ATank* GetPlayerTank() const;
 };

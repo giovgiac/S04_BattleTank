@@ -2,7 +2,11 @@
 
 #include "TankPlayerController.h"
 
+// Engine Includes
 #include "Engine/World.h"
+
+// Project Includes
+#include "Tank.h"
 
 void ATankPlayerController::BeginPlay() 
 {
