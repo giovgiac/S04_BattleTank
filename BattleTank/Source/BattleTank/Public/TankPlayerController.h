@@ -14,7 +14,7 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 
-public:
+private:
 	UPROPERTY(EditDefaultsOnly, Category="Crosshair")
 	float CrossHairX = 0.5;
 

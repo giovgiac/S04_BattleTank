@@ -11,9 +11,14 @@ class BATTLETANK_API ATank : public APawn
 {
 	GENERATED_BODY()
 
-public:
+private:
 	UPROPERTY(EditDefaultsOnly, Category=Firing)
 	float LaunchSpeed = 4000;
+
+	UPROPERTY(EditDefaultsOnly, Category=Setup)
+	TSubclassOf<class AProjectile> ProjectileBlueprint;
+
+	class UTankBarrel* Barrel = nullptr;
 
 public:
 	// Sets default values for this pawn's properties
