@@ -10,10 +10,15 @@ UCLASS()
 class BATTLETANK_API AProjectile : public AActor
 {
 	GENERATED_BODY()
+
+protected:
+	class UProjectileMovementComponent* ProjectileMovement;
 	
 public:	
 	// Sets default values for this actor's properties
 	AProjectile();
+
+	void LaunchProjectile(float Speed);
 
 protected:
 	// Called when the game starts or when spawned

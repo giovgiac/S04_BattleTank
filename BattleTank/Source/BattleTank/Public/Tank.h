@@ -15,10 +15,15 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category=Firing)
 	float LaunchSpeed = 4000;
 
+	UPROPERTY(EditDefaultsOnly, Category=Firing)
+	float ReloadTimeInSeconds = 3.0;
+
 	UPROPERTY(EditDefaultsOnly, Category=Setup)
 	TSubclassOf<class AProjectile> ProjectileBlueprint;
 
 	class UTankBarrel* Barrel = nullptr;
+
+	double LastFireTime = 0.0;
 
 public:
 	// Sets default values for this pawn's properties
