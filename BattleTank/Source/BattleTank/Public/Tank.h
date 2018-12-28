@@ -13,7 +13,7 @@ class BATTLETANK_API ATank : public APawn
 
 public:
 	UPROPERTY(EditDefaultsOnly, Category=Firing)
-	float LaunchSpeed = 100000;
+	float LaunchSpeed = 4000;
 
 public:
 	// Sets default values for this pawn's properties
@@ -23,6 +23,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category=Setup)
 	void SetBarrelReference(class UTankBarrel* BarrelToSet);
+
+	UFUNCTION(BlueprintCallable, Category=Setup)
+	void SetTurretReference(class UTankTurret* TurretToSet);
 
 protected:
 	class UTankAimingComponent* TankAimingComponent;

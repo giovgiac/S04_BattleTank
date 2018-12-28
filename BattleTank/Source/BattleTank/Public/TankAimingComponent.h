@@ -19,10 +19,12 @@ public:
 
 	void SetBarrelReference(class UTankBarrel* BarrelToSet);
 
+	void SetTurretReference(class UTankTurret* TurretToSet);
+
 private:
 	void MoveBarrelTo(FVector AimDirection);
 
 private:
 	class UTankBarrel* Barrel = nullptr;
-
+	class UTankTurret* Turret = nullptr;
 };
