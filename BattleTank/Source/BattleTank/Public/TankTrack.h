@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS(ClassGroup = (Tank), HideCategories = (Collision), ShowCategories = (Mobility), EditInlineNew, meta = (BlueprintSpawnableComponent))
+UCLASS(ClassGroup = (Tank), ShowCategories = (Mobility), EditInlineNew, meta = (BlueprintSpawnableComponent))
 class BATTLETANK_API UTankTrack : public UStaticMeshComponent
 {
 	GENERATED_BODY()
@@ -17,4 +17,8 @@ class BATTLETANK_API UTankTrack : public UStaticMeshComponent
 public:
 	UFUNCTION(BlueprintCallable, Category=Input)
 	void SetThrottle(float Throttle);
+
+private:
+	UPROPERTY(EditDefaultsOnly)
+	float TrackMaxDrivingForce = 4000000;
 };
